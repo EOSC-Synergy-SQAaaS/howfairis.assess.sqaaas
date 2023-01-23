@@ -1,0 +1,80 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.8
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/fair-software/howfairis:
+      branch: main
+      repo: https://github.com/fair-software/howfairis
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/fair-software/howfairis git:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-dandelion-buffalo.sh
+        container: qc.acc_whiny-teal-rottweiler
+  QC.Doc:
+    repos:
+      github.com/fair-software/howfairis find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-razzmatazz-frog.sh
+        container: qc.doc_droopy-carmine-chinook
+      github.com/fair-software/howfairis git:
+        commands:
+        - /usr/bin/env sh .sqa/script.crappy-pumpkin-reindeer.sh
+        container: qc.doc_homey-xanthic-hamster
+      github.com/fair-software/howfairis markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.freaky-cream-dalmatian.sh
+        container: qc.doc_squeaky-viridian-tiger
+      github.com/fair-software/howfairis restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.beady-tan-paradise.sh
+        container: qc.doc_silly-turquoise-boar
+  QC.Lic:
+    repos:
+      github.com/fair-software/howfairis licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-thistle-frigatebird.sh
+        container: qc.lic_sloppy-white-tarantula
+  QC.Met:
+    repos:
+      github.com/fair-software/howfairis cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.muzzy-viridian-akita.sh
+        container: qc.met_smelly-brown-giraffe
+      github.com/fair-software/howfairis validate_codemeta:
+        commands:
+        - /usr/bin/env sh .sqa/script.cozy-black-civet.sh
+        container: qc.met_woozy-platinum-donkey
+  QC.Sec:
+    repos:
+      github.com/fair-software/howfairis bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-saffron-dunker.sh
+        container: qc.sec_chewy-lemon-cockroach
+  QC.Sty:
+    repos:
+      github.com/fair-software/howfairis flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.nippy-cobalt-hummingbird.sh
+        container: qc.sty_freaky-blue-frise
+      github.com/fair-software/howfairis hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-grey-reindeer.sh
+        container: qc.sty_wimpy-xanthic-caiman
+      github.com/fair-software/howfairis jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.pokey-salmon-cougar.sh
+        container: qc.sty_nippy-cornflower-cattle
+  QC.Ver:
+    repos:
+      github.com/fair-software/howfairis get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-green-barb.sh
+        container: qc.ver_skimpy-wisteria-hare
+timeout: 5400
