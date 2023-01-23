@@ -15,66 +15,66 @@ sqa_criteria:
     repos:
       github.com/fair-software/howfairis git:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-dandelion-buffalo.sh
-        container: qc.acc_whiny-teal-rottweiler
+        - /usr/bin/env sh .sqa/script.woozy-russet-ray.sh
+        container: qc.acc_cloudy-cinnabar-lynx
   QC.Doc:
     repos:
       github.com/fair-software/howfairis find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-razzmatazz-frog.sh
-        container: qc.doc_droopy-carmine-chinook
+        - /usr/bin/env sh .sqa/script.paltry-amber-urchin.sh
+        container: qc.doc_chummy-persimmon-raccoon
       github.com/fair-software/howfairis git:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-pumpkin-reindeer.sh
-        container: qc.doc_homey-xanthic-hamster
+        - /usr/bin/env sh .sqa/script.muzzy-lavender-mongrel.sh
+        container: qc.doc_wheezy-champagne-frigatebird
       github.com/fair-software/howfairis markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-cream-dalmatian.sh
-        container: qc.doc_squeaky-viridian-tiger
+        - /usr/bin/env sh .sqa/script.woolly-razzmatazz-hippopotamus.sh
+        container: qc.doc_zippy-orange-zonkey
       github.com/fair-software/howfairis restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-tan-paradise.sh
-        container: qc.doc_silly-turquoise-boar
+        - /usr/bin/env sh .sqa/script.zippy-tangerine-eleuth.sh
+        container: qc.doc_thirsty-corn-dunker
   QC.Lic:
     repos:
       github.com/fair-software/howfairis licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-thistle-frigatebird.sh
-        container: qc.lic_sloppy-white-tarantula
+        - /usr/bin/env sh .sqa/script.pokey-burgundy-tarantula.sh
+        container: qc.lic_hasty-amber-bee
   QC.Met:
     repos:
       github.com/fair-software/howfairis cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-viridian-akita.sh
-        container: qc.met_smelly-brown-giraffe
+        - /usr/bin/env sh .sqa/script.randy-emerald-crocodile.sh
+        container: qc.met_cheeky-jade-woodpecker
       github.com/fair-software/howfairis validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-black-civet.sh
-        container: qc.met_woozy-platinum-donkey
+        - /usr/bin/env sh .sqa/script.queasy-coral-giraffe.sh
+        container: qc.met_nerdy-plum-stingray
   QC.Sec:
     repos:
       github.com/fair-software/howfairis bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-saffron-dunker.sh
-        container: qc.sec_chewy-lemon-cockroach
+        - /usr/bin/env sh .sqa/script.woozy-mauve-jaguar.sh
+        container: qc.sec_muzzy-orchid-impala
   QC.Sty:
     repos:
       github.com/fair-software/howfairis flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-cobalt-hummingbird.sh
-        container: qc.sty_freaky-blue-frise
+        - /usr/bin/env sh .sqa/script.hilly-pink-wolverine.sh
+        container: qc.sty_sleepy-beige-crane
       github.com/fair-software/howfairis hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-grey-reindeer.sh
-        container: qc.sty_wimpy-xanthic-caiman
+        - /usr/bin/env sh .sqa/script.geeky-orange-buzzard.sh
+        container: qc.sty_sickly-scarlet-caiman
       github.com/fair-software/howfairis jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-salmon-cougar.sh
-        container: qc.sty_nippy-cornflower-cattle
+        - /usr/bin/env sh .sqa/script.lanky-orchid-panda.sh
+        container: qc.sty_breezy-sapphire-insect
   QC.Ver:
     repos:
       github.com/fair-software/howfairis get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-green-barb.sh
-        container: qc.ver_skimpy-wisteria-hare
+        - /usr/bin/env sh .sqa/script.snoopy-ruby-horse.sh
+        container: qc.ver_snazzy-tan-russel
 timeout: 5400
